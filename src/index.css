@@ -1,13 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Prociono", sans-serif;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #07141E;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0B272E;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 1px solid #2F9E94;  /* creates padding around scroll thumb */
+}
+
+.prociono-regular {
+  font-family: "Prociono", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+video {
+  border-radius: 20px;
+  width: 50vw;
+}
+.circle{
+  position: absolute;
+  top: 10rem;
+  width: 200px;
+  height: 200px;
+  background-color: #0d3f4a45;
+  backdrop-filter: blur(2px);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.cursor{
+  width: 500px;
+  height: 500px;
+  background-color: blanchedalmond;
+  position: fixed;
+ 
+}
+
+
+body {
+  --black: #111111;
+  --white: #fdfdfd;
+  --green: #22cc88;
+  --blue: #0055ff;
+  --purple: #8855ff;
+  --red: #ff0055;
+  --orange: #ee4444;
+  --yellow: #ffcc00;
+  --mustard: #ffaa00;
+
+  --background: var(--white);
+  --accent: var(--black);
+
+
+  background-color: var(--background);
+  color: var(--accent);
+
+}
+
+
+
+
+
+
+article {
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--red);
+  transform-origin: 0%;
 }
