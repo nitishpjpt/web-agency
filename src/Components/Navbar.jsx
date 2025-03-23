@@ -21,7 +21,7 @@ const Navbar = () => {
       <header className=" bg-gradient-to-r from-[#0C2A31] to-[#050B17] sm:width-[100rem] text-white flex justify-around items-center p-5 ">
         <div className="flex justify-center items-center gap-2">
           <img className="w-10 logo" src="https://cdn-icons-png.freepik.com/256/4120/4120692.png?ga=GA1.1.671655325.1715182066&semt=ais_hybrid"></img>
-          <h2 className="text-2xl font-semibold" >Digiboost</h2>
+          <h2 className="text-2xl font-semibold" >Hyper Dev</h2>
         </div>
         <nav className="lg:flex list-none font-thin text-xl gap-10 sm:hidden">
           <a href="/">Home</a>

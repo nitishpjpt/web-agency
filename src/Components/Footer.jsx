@@ -55,7 +55,7 @@ const Footer = () => {
                     src="https://cdn-icons-png.freepik.com/256/4120/4120692.png?ga=GA1.1.671655325.1715182066&semt=ais_hybrid"
                   ></img>
                   <h4 className="text-3xl fonat-semibold text-blueGray-700">
-                    Digiboost
+                    Hyper Dev
                   </h4>
                 </div>
                 <h5 className="text-lg mt-0 mb-2 pt-2 text-blueGray-600">
@@ -86,7 +86,7 @@ const Footer = () => {
                       <li>
                         <a
                           className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
-                          href="https://www.creative-tim.com/presentation?ref=njs-profile"
+                         
                         >
                           About Us
                         </a>
@@ -94,7 +94,7 @@ const Footer = () => {
                       <li>
                         <a
                           className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
-                          href="https://blog.creative-tim.com?ref=njs-profile"
+                        
                         >
                           Blog
                         </a>
@@ -102,7 +102,7 @@ const Footer = () => {
                       <li>
                         <a
                           className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
-                          href="https://www.github.com/creativetimofficial?ref=njs-profile"
+                         
                         >
                           Github
                         </a>
@@ -110,7 +110,7 @@ const Footer = () => {
                       <li>
                         <a
                           className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
-                          href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
+                         
                         >
                           Free Products
                         </a>
@@ -125,7 +125,7 @@ const Footer = () => {
                       <li>
                         <a
                           className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
-                          href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
+                         
                         >
                           MIT License
                         </a>
@@ -133,7 +133,7 @@ const Footer = () => {
                       <li>
                         <a
                           className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
-                          href="https://creative-tim.com/terms?ref=njs-profile"
+                          
                         >
                           Terms &amp; Conditions
                         </a>
@@ -141,7 +141,7 @@ const Footer = () => {
                       <li>
                         <a
                           className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
-                          href="https://creative-tim.com/privacy?ref=njs-profile"
+                         
                         >
                           Privacy Policy
                         </a>
@@ -149,7 +149,7 @@ const Footer = () => {
                       <li>
                         <a
                           className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
-                          href="https://creative-tim.com/contact-us?ref=njs-profile"
+                          
                         >
                           Contact Us
                         </a>
@@ -163,7 +163,7 @@ const Footer = () => {
             <div className="flex flex-wrap items-center md:justify-between justify-center">
               <div className="w-full md:w-5/12  px-4 mx-auto text-center">
                 <div className="text-sm text-blueGray-500 flex justify-center items-center py-1">
-                  <h2 className="flex justify-center items-center text-center gap-1">Copyright © Made with <FcLike className="text-xl"/> Nitish Prajapati</h2>
+                  <h2 className="flex justify-center items-center text-center gap-1">Copyright © 2025 Made with <FcLike className="text-xl"/> Hyper Dev</h2>
                 </div>
               </div>
             </div>

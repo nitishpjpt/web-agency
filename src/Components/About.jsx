@@ -59,12 +59,12 @@ const textVariants = {
           <br></br>
         <motion.div variants={textVariants}>  <h3 className="text-[#040612] text-6xl ">
             Why You Should <br></br> Choose{" "}
-            <span className="text-[#2F9E94]">Digiboost</span>
+            <span className="text-[#2F9E94]">Hyper Dev</span>
           </h3></motion.div>
           <br></br>
         <motion.div variants={textVariants}>
         <p>
-            We are digital agency that speacializes in web design,SEO,<br></br>
+            We are digital agency that speacializes in Web Design,<br></br>Web Development,App Development,SEO,<br></br>
             social media managment. Our experienced team works
           </p>
         </motion.div>
