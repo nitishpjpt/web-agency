@@ -1,6 +1,7 @@
 import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
         </div>
         <nav className="lg:flex list-none font-thin text-xl gap-10 sm:hidden">
           <a href="/">Home</a>
-          <a href="#about">About Us</a>
+          <Link to="/about">About</Link>
           <a href="#sevices">Services</a>
           <a href="#project">Projects</a>
         </nav>

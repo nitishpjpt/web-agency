@@ -66,31 +66,43 @@ const PackageDetails = () => {
   };
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={variants}>
-      <section className="bg-[#0A192F] flex justify-center items-center p-10">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+    >
+      <section className="bg-[#0A192F] flex justify-center items-center px-6 py-16 md:p-10">
         <div className="max-w-6xl w-full">
           {/* Header Section */}
-          <div className="text-center mb-16">
-            <motion.h2 variants={variants} className="text-xl font-semibold text-gray-400 uppercase tracking-widest">
+          <div className="text-center mb-12 md:mb-16">
+            <motion.h2
+              variants={variants}
+              className="text-lg md:text-xl font-semibold text-gray-400 uppercase tracking-widest"
+            >
               Our Services
             </motion.h2>
-            <motion.p variants={variants} className="text-5xl font-bold text-white mt-2">
+            <motion.p
+              variants={variants}
+              className="text-3xl md:text-5xl font-bold text-white mt-2"
+            >
               Choose Your <span className="text-[#37C8AE]">Package</span>
             </motion.p>
           </div>
 
           {/* Package Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-10">
             {packages.map((pkg, index) => (
               <motion.div
                 key={index}
-                className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg hover:scale-105 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/20 shadow-lg hover:scale-[1.03] transition-transform duration-300"
                 variants={variants}
               >
-                <h3 className="text-2xl font-bold text-[#37C8AE] mb-2">{pkg.title}</h3>
-               
-                
-                <ul className="mt-4 space-y-3 text-gray-300">
+                <h3 className="text-xl md:text-2xl font-bold text-[#37C8AE] mb-2">
+                  {pkg.title}
+                </h3>
+
+                <ul className="mt-4 space-y-3 text-gray-300 text-sm md:text-base">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2">
                       ✅ <span>{feature}</span>
@@ -98,7 +110,7 @@ const PackageDetails = () => {
                   ))}
                 </ul>
 
-                <button className="mt-6 bg-[#37C8AE] text-white py-2 px-6 rounded-lg hover:bg-[#2aa189] transition-all duration-300 w-full">
+                <button className="mt-6 bg-[#37C8AE] text-white py-2 px-4 md:px-6 rounded-lg hover:bg-[#2aa189] transition-all duration-300 w-full text-sm md:text-base">
                   Get Started
                 </button>
               </motion.div>

@@ -18,7 +18,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="w-[100vw] md:h-[80vh] sm:h-[60vh]  bg-gradient-to-r from-[#0C2A31] to-[#050B17] sm:block sm:text-center sm:pt-5 md:flex justify-evenly items-center gap-5 ">
+    <div className="w-[100vw] md:h-[80vh] flex lg:flex-row sm:flex-col sm:h-[60vh]  bg-gradient-to-r from-[#0C2A31] to-[#050B17]  sm:text-center sm:pt-5 md:flex justify-evenly items-center gap-5 ">
       {/* left-box */}
       <div className="block justify-center items-center gap-5 z-0 ">
         {/* circle*/}
@@ -38,7 +38,7 @@ const Hero = () => {
         </button>
       </div>
       {/* right-box */}
-      <div className="flex justify-center items-center sm:pt-3 sm:hidden md:flex">
+      <div className="flex justify-center items-center sm:pt-3 md:flex">
         <video
           src={video}
           muted
