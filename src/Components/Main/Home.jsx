@@ -7,6 +7,8 @@ import Project from "../Project";
 import Price from "../Price";
 import Faq from "../Faq";
 import Footer from "../Footer";
+import ServicesSection from "../Services";
+import Contact from "../ContactSection";
 
 export const Home = () => {
   return (
@@ -15,8 +17,10 @@ export const Home = () => {
       <Hero />
       <About />
       <Service />
+      {/* <ServicesSection/> */}
       <Project />
       <Price />
+      <Contact/>
       <Faq />
       <Footer />
     </>

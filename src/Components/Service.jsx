@@ -41,7 +41,7 @@ const Service = () => {
 
   return (
     <>
-     <motion.div ref={ref} initial="hidden" animate={controls} variants={variants} className="about">
+
      <div id="sevices" className=" bg-gradient-to-r from-[#0C2A31] to-[#050B17]">
         {/* upper side text */}
         <div className="md:flex justify-evenly items-center sm:block sm:text-center sm:p-4 pt-10  h-[50vh] text-white bg-gradient-to-r from-[#0C2A31] to-[#050B17]">
@@ -102,7 +102,7 @@ const Service = () => {
        </div>
 
       </div>
-     </motion.div>
+    
     </>
   );
 };

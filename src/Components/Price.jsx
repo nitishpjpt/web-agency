@@ -39,16 +39,13 @@ const packages = [
   },
 ];
 
-const PackageDetails = () => {
+const PricingPlans = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
+    if (inView) controls.start("visible");
+    else controls.start("hidden");
   }, [controls, inView]);
 
   const variants = {
@@ -56,70 +53,68 @@ const PackageDetails = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.42, 0, 0.58, 1],
-        when: "beforeChildren",
-        staggerChildren: 0.2,
-      },
+      transition: { duration: 0.6, staggerChildren: 0.15 },
     },
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
-    >
-      <section className="bg-[#0A192F] flex justify-center items-center px-6 py-16 md:p-10">
-        <div className="max-w-6xl w-full">
-          {/* Header Section */}
-          <div className="text-center mb-12 md:mb-16">
-            <motion.h2
+    <>
+      <motion.section
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={variants}
+        className="bg-[#0C2D35] py-16 px-4 md:px-10 text-center"
+      >
+        <motion.h2
+          variants={variants}
+          className="text-lg md:text-xl font-semibold text-gray-400 uppercase tracking-widest"
+        >
+          Our Services
+        </motion.h2>
+        <motion.p
+          variants={variants}
+          className="text-3xl md:text-5xl font-bold text-white mt-2 mb-10"
+        >
+          Choose Your <span className="text-[#37C8AE]">Package</span>
+        </motion.p>
+        <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+          {packages.map((plan, index) => (
+            <motion.div
+              key={index}
               variants={variants}
-              className="text-lg md:text-xl font-semibold text-gray-400 uppercase tracking-widest"
+              className="bg-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-lg shadow-xl flex flex-col justify-between hover:scale-[1.03] transition-transform duration-300"
             >
-              Our Services
-            </motion.h2>
-            <motion.p
-              variants={variants}
-              className="text-3xl md:text-5xl font-bold text-white mt-2"
-            >
-              Choose Your <span className="text-[#37C8AE]">Package</span>
-            </motion.p>
-          </div>
-
-          {/* Package Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-10">
-            {packages.map((pkg, index) => (
-              <motion.div
-                key={index}
-                className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/20 shadow-lg hover:scale-[1.03] transition-transform duration-300"
-                variants={variants}
-              >
-                <h3 className="text-xl md:text-2xl font-bold text-[#37C8AE] mb-2">
-                  {pkg.title}
+              <div>
+                <h3 className="text-white text-xl font-semibold mb-2">
+                  {plan.title}
                 </h3>
+                <p className="text-sm text-gray-400 mb-4">{plan.description}</p>
+                <div className="text-white text-3xl font-bold mb-1">
+                  {plan.price}
+                </div>
+                <div className="text-gray-400 text-sm mb-6">
+                  {plan.additional}
+                </div>
 
-                <ul className="mt-4 space-y-3 text-gray-300 text-sm md:text-base">
-                  {pkg.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2">
+                <ul className="space-y-3 text-sm text-gray-300">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2">
                       ✅ <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
+              </div>
 
-                <button className="mt-6 bg-[#37C8AE] text-white py-2 px-4 md:px-6 rounded-lg hover:bg-[#2aa189] transition-all duration-300 w-full text-sm md:text-base">
-                  Get Started
-                </button>
-              </motion.div>
-            ))}
-          </div>
+              <button className="mt-8 w-full bg-white/10 border border-white/20 text-white py-2 rounded-lg hover:bg-[#37C8AE] hover:text-black transition-all duration-300 text-sm font-medium">
+                {plan.button}
+              </button>
+            </motion.div>
+          ))}
         </div>
-      </section>
-    </motion.div>
+      </motion.section>
+    </>
   );
 };
 
-export default PackageDetails;
+export default PricingPlans;
